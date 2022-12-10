@@ -1,0 +1,7 @@
+arrowParens: 'avoid'
+singleQuote: true
+endOfLine: 'lf'
+bracketSpacing: true
+tabWidth: 2
+semi: false
+trailingComma: 'none'

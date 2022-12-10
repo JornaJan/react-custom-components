@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Button2 } from './layouts2'
 
-function App() {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Button</h1>
+      <Button2
+        style={{ color: '#FFF' }}
+        theme="danger"
+        size="large"
+        path="https://reactjs.org/"
+      >
+        Button2 Default
+      </Button2>
+      <Button2
+        theme="warning"
+        size="large"
+        onClick={() => {
+          console.log(1)
+        }}
+      >
+        Warning Button2
+      </Button2>
+      <Button2 theme="info" size="small">
+        Info Button
+      </Button2>
+      <Button2
+        as="button"
+        theme="success"
+        size="large"
+        border={1}
+        onClick={() => console.log('hello react')}
+      >
+        动感光波
+        <FontAwesomeIcon icon={faUser} />
+      </Button2>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
